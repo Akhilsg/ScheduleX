@@ -1,10 +1,14 @@
 import { ThemeProvider } from "@mui/material";
-import "./App.css";
+import CalendarView from "./calendar/CalendarView";
+import { theme } from "./theme";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      nigger
+      <Routes>
+        <Route path="/" element={<CalendarView />} />
+      </Routes>
     </ThemeProvider>
   );
 }
